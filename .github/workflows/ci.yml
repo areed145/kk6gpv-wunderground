@@ -50,3 +50,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: areed145/kk6gpv-wunderground
           tags: latest
+      - name: Set up kubectl
+        uses: matootie/dokube@v1.3.2
+        with:
+          personalAccessToken: ${{ secrets.DIGITALOCEAN_TOKEN }}
+          clusterName: k8s-1-16-2-do-3-sfo2-1580268289343
+      - name: Apply new image
+        run: kubectl replace -f kube.yml --force
