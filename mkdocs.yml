@@ -1,0 +1,24 @@
+site_name: kk6gpv-wunderground
+site_description: "Documentation for kk6gpv-wunderground component of Coconut Barometer site"
+site_author: "Adam Reeder"
+site_url: "https://areed145.github.io/kk6gpv-wunderground"
+docs_dir: docs/
+repo_name: "areed145/kk6gpv-wunderground"
+repo_url: "https://github.com/areed145/kk6gpv-wunderground"
+nav:
+  - Reference: index.md
+theme:
+  name: "material"
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+plugins:
+  - search:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+      watch:
+        - src/wunderground
