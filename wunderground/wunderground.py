@@ -11,11 +11,17 @@ class Wunderground:
     """Class that fetches weather from Wunderground and copies to MongoDB"""
 
     def __init__(self, dbc, sid, api):
+        """
+        Initializes class
+        """
         self.dbc = dbc
         self.sid = sid
         self.api = api
 
     def convert(self, val):
+        """
+        Convert values to float
+        """
         try:
             val = float(val)
         except Exception:
@@ -25,6 +31,9 @@ class Wunderground:
         return val
 
     def get_current(self):
+        """
+        Get current observation
+        """
         url = (
             "https://api.weather.com/v2/pws/observations/current?stationId="
             + str(self.sid)
@@ -85,6 +94,9 @@ class Wunderground:
                 print("duplicate current post")
 
     def get_day(self):
+        """
+        Get observations for the full day
+        """
         url = (
             "https://api.weather.com/v2/pws/observations/all/1day?stationId="
             + str(self.sid)
@@ -164,6 +176,9 @@ class Wunderground:
                 print("duplicate day post")
 
     def run(self):
+        """
+        Main method to run
+        """
         client = MongoClient(self.dbc)
         db = client.wx
         self.raw = db.raw

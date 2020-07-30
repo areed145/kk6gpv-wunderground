@@ -1,3 +1,3 @@
-# Documentation for `Wunderground`
+# Documentation
 
-::: src.wunderground.wunderground.Wunderground
+::: wunderground.wunderground.Wunderground
