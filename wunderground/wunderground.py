@@ -188,7 +188,7 @@ class Wunderground:
         while True:
             if datetime.now().minute != last_minute:
                 try:
-                    self.get_current(self.sid)
+                    self.get_current()
                     last_minute = datetime.now().minute
                     print("got current " + str(datetime.now()))
                 except Exception:
@@ -198,7 +198,7 @@ class Wunderground:
                 print("skipping current " + str(datetime.now()))
             if datetime.now().hour != last_hour:
                 try:
-                    self.get_day(self.sid)
+                    self.get_day()
                     last_hour = datetime.now().hour
                     print("got day " + str(datetime.now()))
                 except Exception:
