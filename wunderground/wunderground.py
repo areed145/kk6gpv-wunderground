@@ -211,6 +211,8 @@ class Wunderground:
 
 if __name__ == "__main__":
     wunderground = Wunderground(
-        dbc=os.environ["MONGODB_CLIENT"], sid=os.environ["SID"], api=os.environ["API"],
+        dbc=os.environ["MONGODB_CLIENT"],
+        sid=os.environ["SID"],
+        api=os.environ["API"],
     )
     wunderground.run()
