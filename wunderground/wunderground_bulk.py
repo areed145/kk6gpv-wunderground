@@ -223,7 +223,9 @@ class Wunderground:
 
 if __name__ == "__main__":
     wunderground = Wunderground(
-        dbc=os.environ["MONGODB_CLIENT"], sid=os.environ["SID"], api=os.environ["API"],
+        dbc=os.environ["MONGODB_CLIENT"],
+        sid=os.environ["SID"],
+        api=os.environ["API"],
     )
     wunderground.run()
 
@@ -279,8 +281,8 @@ def convert(val):
 
 def get_day(self):
     """
-        Get observations for the full day
-        """
+    Get observations for the full day
+    """
     url = (
         "https://api.weather.com/v2/pws/observations/all/1day?stationId="
         + str(self.sid)
