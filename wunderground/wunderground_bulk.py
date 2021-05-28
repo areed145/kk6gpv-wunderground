@@ -281,8 +281,8 @@ def convert(val):
 
 def get_day(self):
     """
-        Get observations for the full day
-        """
+    Get observations for the full day
+    """
     url = (
         "https://api.weather.com/v2/pws/observations/all/1day?stationId="
         + str(self.sid)
@@ -369,4 +369,3 @@ if __name__ == "__main__":
     db = client.wx
     raw = db.raw
     sid = os.environ["SID"]
-
