@@ -1,11 +1,13 @@
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 from pymongo import MongoClient
 import pandas as pd
 import time
 import os
 import json
 import logging
+
+logging.basicConfig()
 
 
 class Wunderground:
@@ -19,7 +21,7 @@ class Wunderground:
         self.sid = sid
         self.api = api
         self.logger = logging.getLogger("kk6gpv-wunderground")
-        self.logger.setLevel(logging.INFO)
+        self.logger.setLevel(logging.DEBUG)
 
     def convert(self, val):
         """
@@ -186,29 +188,41 @@ class Wunderground:
         db = client.wx
         self.raw = db.raw
 
-        last_hour = datetime.now().hour - 1
-        last_minute = datetime.now().minute - 1
+        last_hour = datetime.now(timezone.utc).hour - 1
+        last_minute = datetime.now(timezone.utc).minute - 1
         while True:
-            if datetime.now().minute != last_minute:
+            if datetime.now(timezone.utc).minute != last_minute:
                 try:
                     self.get_current()
-                    last_minute = datetime.now().minute
-                    self.logger.info("got current " + str(datetime.now()))
+                    last_minute = datetime.now(timezone.utc).minute
+                    self.logger.info(
+                        "got current " + str(datetime.now(timezone.utc))
+                    )
                 except Exception:
-                    self.logger.info("failed current " + str(datetime.now()))
+                    self.logger.info(
+                        "failed current " + str(datetime.now(timezone.utc))
+                    )
                     pass
             else:
-                self.logger.info("skipping current " + str(datetime.now()))
-            if datetime.now().hour != last_hour:
+                self.logger.info(
+                    "skipping current " + str(datetime.now(timezone.utc))
+                )
+            if datetime.now(timezone.utc).hour != last_hour:
                 try:
                     self.get_day()
-                    last_hour = datetime.now().hour
-                    self.logger.info("got day " + str(datetime.now()))
+                    last_hour = datetime.now(timezone.utc).hour
+                    self.logger.info(
+                        "got day " + str(datetime.now(timezone.utc))
+                    )
                 except Exception:
-                    self.logger.info("failed day " + str(datetime.now()))
+                    self.logger.info(
+                        "failed day " + str(datetime.now(timezone.utc))
+                    )
                     pass
             else:
-                self.logger.info("skipping day " + str(datetime.now()))
+                self.logger.info(
+                    "skipping day " + str(datetime.now(timezone.utc))
+                )
             time.sleep(30)
 
 
