@@ -11,6 +11,6 @@ RUN pip install --upgrade pip && \
 
 ENV MONGODB_CLIENT 'mongodb+srv://kk6gpv:kk6gpv@cluster0-kglzh.azure.mongodb.net/test?retryWrites=true&w=majority'
 ENV SID 'KTXMONTG307'
-ENV API '945638f35a724a6b9638f35a727a6bd4'
+ENV API '07490eb02d514d86890eb02d513d8646'
 
 CMD ["python", "wunderground/wunderground.py"]
