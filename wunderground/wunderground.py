@@ -5,6 +5,7 @@ import pandas as pd
 import time
 import os
 import json
+import logging
 
 
 class Wunderground:
@@ -17,6 +18,8 @@ class Wunderground:
         self.dbc = dbc
         self.sid = sid
         self.api = api
+        self.logger = logging.getLogger("kk6gpv-wunderground")
+        self.logger.setLevel(logging.INFO)
 
     def convert(self, val):
         """
@@ -89,9 +92,9 @@ class Wunderground:
             ob.pop("epoch")
             try:
                 self.raw.insert_one(ob)
-                print(ob)
+                self.logger.info(str(ob))
             except Exception:
-                print("duplicate current post")
+                self.logger.info("duplicate current post")
 
     def get_day(self):
         """
@@ -171,9 +174,9 @@ class Wunderground:
             ob.pop("tz")
             try:
                 self.raw.insert_one(ob)
-                print(ob)
+                self.logger.info(str(ob))
             except Exception:
-                print("duplicate day post")
+                self.logger.info("duplicate day post")
 
     def run(self):
         """
@@ -190,22 +193,22 @@ class Wunderground:
                 try:
                     self.get_current()
                     last_minute = datetime.now().minute
-                    print("got current " + str(datetime.now()))
+                    self.logger.info("got current " + str(datetime.now()))
                 except Exception:
-                    print("failed current " + str(datetime.now()))
+                    self.logger.info("failed current " + str(datetime.now()))
                     pass
             else:
-                print("skipping current " + str(datetime.now()))
+                self.logger.info("skipping current " + str(datetime.now()))
             if datetime.now().hour != last_hour:
                 try:
                     self.get_day()
                     last_hour = datetime.now().hour
-                    print("got day " + str(datetime.now()))
+                    self.logger.info("got day " + str(datetime.now()))
                 except Exception:
-                    print("failed day " + str(datetime.now()))
+                    self.logger.info("failed day " + str(datetime.now()))
                     pass
             else:
-                print("skipping day " + str(datetime.now()))
+                self.logger.info("skipping day " + str(datetime.now()))
             time.sleep(30)
 
 
