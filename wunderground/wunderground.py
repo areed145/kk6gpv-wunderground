@@ -95,7 +95,8 @@ class Wunderground:
             try:
                 self.raw.insert_one(ob)
                 self.logger.info(str(ob))
-            except Exception:
+            except Exception as e:
+                self.logger(str(e))
                 self.logger.info("duplicate current post")
 
     def get_day(self):
@@ -177,7 +178,8 @@ class Wunderground:
             try:
                 self.raw.insert_one(ob)
                 self.logger.info(str(ob))
-            except Exception:
+            except Exception as e:
+                self.logger(str(e))
                 self.logger.info("duplicate day post")
 
     def run(self):
