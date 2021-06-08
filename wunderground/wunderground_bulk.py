@@ -1,8 +1,6 @@
 import urllib.request
-from datetime import datetime, timezone
 from pymongo import MongoClient
 import pandas as pd
-import time
 import os
 import json
 
@@ -126,7 +124,7 @@ class Wunderground:
         self.raw = db.raw
 
         y = 2021
-        for m in range(4, 6):
+        for m in range(6, 7):
             for d in range(1, 31):
                 try:
                     self.get_day(m, d, y)
