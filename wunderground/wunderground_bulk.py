@@ -129,8 +129,7 @@ class Wunderground:
                 try:
                     self.get_day(m, d, y)
                     print("got day {}-{}-{}".format(y, m, d))
-                except Exception as e:
-                    print(str(e))
+                except Exception:
                     print("failed day {}-{}-{}".format(y, m, d))
                     pass
 
