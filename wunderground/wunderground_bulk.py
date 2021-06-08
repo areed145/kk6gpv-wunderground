@@ -130,10 +130,10 @@ class Wunderground:
             for d in range(1, 31):
                 try:
                     self.get_day(m, d, y)
-                    print("got day " + str(datetime.now(timezone.utc)))
+                    print("got day {}-{}-{}".format(y, m, d))
                 except Exception as e:
                     print(str(e))
-                    print("failed day " + str(datetime.now(timezone.utc)))
+                    print("failed day {}-{}-{}".format(y, m, d))
                     pass
 
 
