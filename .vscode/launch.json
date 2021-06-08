@@ -18,7 +18,7 @@
         "program": "/Users/areed145/Library/Mobile Documents/com~apple~CloudDocs/GitHub/kk6gpv-wunderground/wunderground/wunderground_bulk.py",
         "console": "integratedTerminal",
         "env": {
-            "MONGODB_CLIENT": "mongodb+srv://kk6gpv:kk6gpv@cluster0-kglzh.azure.mongodb.net/test?retryWrites=true&w=majority",
+            "MONGODB_CLIENT": "mongodb+srv://kk6gpv:<password>@cluster0.kglzh.azure.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
             "SID": "KTXMONTG307",
             "API": "931fd9ce91c240069fd9ce91c2c00690",
         }
