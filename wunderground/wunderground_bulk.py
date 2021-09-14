@@ -42,6 +42,7 @@ class Wunderground:
             + str(m).zfill(2)
             + str(d).zfill(2)
         )
+        print(url)
         hdr = {
             "User-Agent": "Mozilla/5.0 (Macintosh; \
                 Intel Mac OS X 10_10_1) AppleWebKit/537.36 \
@@ -113,7 +114,7 @@ class Wunderground:
                 self.raw.insert_one(ob)
                 print(ob)
             except Exception:
-                print("duplicate day post")
+                print("duplicate observation")
 
     def run(self):
         """
@@ -124,8 +125,8 @@ class Wunderground:
         self.raw = db.raw
 
         y = 2021
-        for m in range(6, 7):
-            for d in range(1, 31):
+        for m in range(9, 10):
+            for d in range(12, 31):
                 try:
                     self.get_day(m, d, y)
                     print("got day {}-{}-{}".format(y, m, d))
