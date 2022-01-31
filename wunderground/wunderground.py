@@ -214,10 +214,11 @@ class Wunderground:
                     self.logger.info(
                         "got day " + str(datetime.now(timezone.utc))
                     )
-                except Exception:
+                except Exception as e:
                     self.logger.info(
                         "failed day " + str(datetime.now(timezone.utc))
                     )
+                    self.logger.info(e)
                     pass
             else:
                 self.logger.info(
