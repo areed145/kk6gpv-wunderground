@@ -3,6 +3,9 @@ from pymongo import MongoClient
 import pandas as pd
 import os
 import json
+from datetime import date, datetime, timedelta
+
+from pymongo.common import _MAX_END_SESSIONS
 
 
 class Wunderground:
@@ -124,15 +127,25 @@ class Wunderground:
         db = client.wx
         self.raw = db.raw
 
-        y = 2021
-        for m in range(9, 10):
-            for d in range(12, 31):
-                try:
-                    self.get_day(m, d, y)
-                    print("got day {}-{}-{}".format(y, m, d))
-                except Exception:
-                    print("failed day {}-{}-{}".format(y, m, d))
-                    pass
+        y_s = 2022
+        m_s = 1
+        d_s = 31
+        y_e = 2022
+        m_e = 2
+        d_e = 1
+        datetime_ = datetime(year=y_s, month=m_s, day=d_s)
+        datetime_end = datetime(year=y_e, month=m_e, day=d_e)
+        while datetime_ <= datetime_end:
+            y = datetime_.year
+            m = datetime_.month
+            d = datetime_.day
+            try:
+                self.get_day(m, d, y)
+                print("got day {}-{}-{}".format(y, m, d))
+            except Exception:
+                print("failed day {}-{}-{}".format(y, m, d))
+                pass
+            datetime_ += timedelta(days=1)
 
 
 if __name__ == "__main__":
