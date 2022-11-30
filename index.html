@@ -1,0 +1,999 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for kk6gpv-wunderground component of Coconut Barometer site">
+      
+      
+        <meta name="author" content="Adam Reeder">
+      
+      
+        <link rel="canonical" href="https://areed145.github.io/kk6gpv-wunderground/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>kk6gpv-wunderground</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Ubuntu Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="kk6gpv-wunderground" class="md-header__button md-logo" aria-label="kk6gpv-wunderground" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            kk6gpv-wunderground
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/areed145/kk6gpv-wunderground" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    areed145/kk6gpv-wunderground
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="kk6gpv-wunderground" class="md-nav__button md-logo" aria-label="kk6gpv-wunderground" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    kk6gpv-wunderground
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/areed145/kk6gpv-wunderground" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    areed145/kk6gpv-wunderground
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Reference
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground" class="md-nav__link">
+    wunderground.wunderground.Wunderground
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.convert" class="md-nav__link">
+    convert()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.get_current" class="md-nav__link">
+    get_current()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.get_day" class="md-nav__link">
+    get_day()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.run" class="md-nav__link">
+    run()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground" class="md-nav__link">
+    wunderground.wunderground.Wunderground
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.convert" class="md-nav__link">
+    convert()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.get_current" class="md-nav__link">
+    get_current()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.get_day" class="md-nav__link">
+    get_day()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wunderground.wunderground.Wunderground.run" class="md-nav__link">
+    run()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/areed145/kk6gpv-wunderground/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="documentation">Documentation</h1>
+
+
+  <div class="doc doc-object doc-class">
+
+<a id="wunderground.wunderground.Wunderground"></a>
+    <div class="doc doc-contents first">
+
+      <p>Class that fetches weather from Wunderground and copies to MongoDB</p>
+
+        <details class="quote">
+          <summary>Source code in <code>wunderground/wunderground.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Wunderground</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Class that fetches weather from Wunderground and copies to MongoDB&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dbc</span><span class="p">,</span> <span class="n">sid</span><span class="p">,</span> <span class="n">api</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes class</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dbc</span> <span class="o">=</span> <span class="n">dbc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sid</span> <span class="o">=</span> <span class="n">sid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api</span> <span class="o">=</span> <span class="n">api</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;kk6gpv-wunderground&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert values to float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">val</span>
+
+    <span class="k">def</span> <span class="nf">get_current</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get current observation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;https://api.weather.com/v2/pws/observations/current?stationId=&quot;</span>
+            <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sid</span><span class="p">)</span>
+            <span class="o">+</span> <span class="s2">&quot;&amp;format=json&amp;units=e&amp;apiKey=&quot;</span>
+            <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">hdr</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) </span><span class="se">\</span>
+<span class="s2">            AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 </span><span class="se">\</span>
+<span class="s2">            Safari/537.36&quot;</span>
+        <span class="p">}</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">hdr</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">obs</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s2">&quot;observations&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">ob</span> <span class="ow">in</span> <span class="n">obs</span><span class="p">:</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;station_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;stationID&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;stationID&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_utc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">])</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_local&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">])</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;imperial&quot;</span><span class="p">])</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;imperial&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solarRadiation&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;solarRadiation&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_deg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;winddir&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;winddir&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;temp_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;temp&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;temp&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewpt_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewpt&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewpt&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure_in&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressure&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qc_status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heat_index_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heatIndex&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatIndex&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windchill_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windChill&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windChill&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_speed_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windSpeed&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windSpeed&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_gust_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windGust&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windGust&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipRate&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipRate&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;station_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;softwareType&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;softwareType&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;realtime_freq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;realtimeFrequency&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;realtimeFrequency&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;epoch&quot;</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">ob</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ob</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;duplicate current post&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_day</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get observations for the full day</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;https://api.weather.com/v2/pws/observations/all/1day?stationId=&quot;</span>
+            <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sid</span><span class="p">)</span>
+            <span class="o">+</span> <span class="s2">&quot;&amp;format=json&amp;units=e&amp;apiKey=&quot;</span>
+            <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">hdr</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Macintosh; </span><span class="se">\</span>
+<span class="s2">                Intel Mac OS X 10_10_1) AppleWebKit/537.36 </span><span class="se">\</span>
+<span class="s2">                (KHTML, like Gecko) Chrome/39.0.2171.95 </span><span class="se">\</span>
+<span class="s2">                Safari/537.36&quot;</span>
+        <span class="p">}</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">hdr</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">obs</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s2">&quot;observations&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">ob</span> <span class="ow">in</span> <span class="n">obs</span><span class="p">:</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;station_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;stationID&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;stationID&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_utc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">])</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_local&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">])</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;imperial&quot;</span><span class="p">])</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;imperial&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solarRadiationHigh&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;solarRadiationHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;uv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;uvHigh&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;uvHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_deg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;winddirAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;winddirAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;temp_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;tempAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tempAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tempHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tempLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewpt_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewptAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewptAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewptHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewptLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;humidity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;humidityAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;humidityAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;humidityHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;humidityLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure_in&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressureMax&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressureMin&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressureMax&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressureMin&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure_trend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressureTrend&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressureTrend&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qc_status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heat_index_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heatindexAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatindexAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatindexHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatindexLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windchill_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windchillAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windchillAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windchillHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windchillLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_speed_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windspeedAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windspeedAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windspeedHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windspeedLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_gust_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windgustAvg&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windgustAvg&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windgustHigh&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windgustLow&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipRate&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipRate&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">]</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;epoch&quot;</span><span class="p">)</span>
+            <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tz&quot;</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">ob</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ob</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;duplicate day post&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Main method to run</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dbc</span><span class="p">)</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">wx</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">raw</span>
+
+        <span class="n">last_hour</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">hour</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">last_minute</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">minute</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">minute</span> <span class="o">!=</span> <span class="n">last_minute</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_current</span><span class="p">()</span>
+                    <span class="n">last_minute</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">minute</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;got current &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                    <span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;failed current &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                    <span class="p">)</span>
+                    <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;skipping current &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">hour</span> <span class="o">!=</span> <span class="n">last_hour</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_day</span><span class="p">()</span>
+                    <span class="n">last_hour</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">hour</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;got day &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                    <span class="p">)</span>
+                <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                        <span class="s2">&quot;failed day &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                    <span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                    <span class="k">pass</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;skipping day &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                <span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 class="doc doc-heading" id="wunderground.wunderground.Wunderground.__init__">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dbc</span><span class="p">,</span> <span class="n">sid</span><span class="p">,</span> <span class="n">api</span><span class="p">)</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-special"><code>special</code></small>
+  </span>
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Initializes class</p>
+
+        <details class="quote">
+          <summary>Source code in <code>wunderground/wunderground.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dbc</span><span class="p">,</span> <span class="n">sid</span><span class="p">,</span> <span class="n">api</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initializes class</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">dbc</span> <span class="o">=</span> <span class="n">dbc</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sid</span> <span class="o">=</span> <span class="n">sid</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">api</span> <span class="o">=</span> <span class="n">api</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;kk6gpv-wunderground&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 class="doc doc-heading" id="wunderground.wunderground.Wunderground.convert">
+<code class="highlight language-python"><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Convert values to float</p>
+
+        <details class="quote">
+          <summary>Source code in <code>wunderground/wunderground.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert values to float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">val</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 class="doc doc-heading" id="wunderground.wunderground.Wunderground.get_current">
+<code class="highlight language-python"><span class="n">get_current</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Get current observation</p>
+
+        <details class="quote">
+          <summary>Source code in <code>wunderground/wunderground.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_current</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get current observation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;https://api.weather.com/v2/pws/observations/current?stationId=&quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sid</span><span class="p">)</span>
+        <span class="o">+</span> <span class="s2">&quot;&amp;format=json&amp;units=e&amp;apiKey=&quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">hdr</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) </span><span class="se">\</span>
+<span class="s2">        AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 </span><span class="se">\</span>
+<span class="s2">        Safari/537.36&quot;</span>
+    <span class="p">}</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">hdr</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">obs</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s2">&quot;observations&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">ob</span> <span class="ow">in</span> <span class="n">obs</span><span class="p">:</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;station_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;stationID&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;stationID&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_utc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">])</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_local&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">])</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;imperial&quot;</span><span class="p">])</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;imperial&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solarRadiation&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;solarRadiation&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_deg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;winddir&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;winddir&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;temp_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;temp&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;temp&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewpt_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewpt&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewpt&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure_in&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressure&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qc_status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heat_index_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heatIndex&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatIndex&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windchill_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windChill&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windChill&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_speed_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windSpeed&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windSpeed&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_gust_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windGust&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windGust&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipRate&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipRate&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;station_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;softwareType&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;softwareType&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;realtime_freq&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;realtimeFrequency&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;realtimeFrequency&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;epoch&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">ob</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ob</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;duplicate current post&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 class="doc doc-heading" id="wunderground.wunderground.Wunderground.get_day">
+<code class="highlight language-python"><span class="n">get_day</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Get observations for the full day</p>
+
+        <details class="quote">
+          <summary>Source code in <code>wunderground/wunderground.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_day</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get observations for the full day</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;https://api.weather.com/v2/pws/observations/all/1day?stationId=&quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sid</span><span class="p">)</span>
+        <span class="o">+</span> <span class="s2">&quot;&amp;format=json&amp;units=e&amp;apiKey=&quot;</span>
+        <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">hdr</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Macintosh; </span><span class="se">\</span>
+<span class="s2">            Intel Mac OS X 10_10_1) AppleWebKit/537.36 </span><span class="se">\</span>
+<span class="s2">            (KHTML, like Gecko) Chrome/39.0.2171.95 </span><span class="se">\</span>
+<span class="s2">            Safari/537.36&quot;</span>
+    <span class="p">}</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">hdr</span><span class="p">)</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="n">obs</span> <span class="o">=</span> <span class="n">msg</span><span class="p">[</span><span class="s2">&quot;observations&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">ob</span> <span class="ow">in</span> <span class="n">obs</span><span class="p">:</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;station_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;stationID&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;stationID&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_utc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">])</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeUtc&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obs_time_local&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">])</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;obsTimeLocal&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;imperial&quot;</span><span class="p">])</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;imperial&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;solarRadiationHigh&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;solarRadiationHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;uv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;uvHigh&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;uvHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_deg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;winddirAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;winddirAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;temp_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;tempAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tempAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tempHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tempLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewpt_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;dewptAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewptAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewptHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;dewptLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;humidity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;humidityAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;humidityAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;humidityHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;humidityLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure_in&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressureMax&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressureMin&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressureMax&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressureMin&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressure_trend&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;pressureTrend&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;pressureTrend&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qc_status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;qcStatus&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heat_index_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;heatindexAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatindexAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatindexHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;heatindexLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windchill_f&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windchillAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windchillAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windchillHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windchillLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_speed_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windspeedAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windspeedAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windspeedHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windspeedLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;wind_gust_mph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;windgustAvg&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windgustAvg&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windgustHigh&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;windgustLow&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipRate&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipRate&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precip_total&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ob</span><span class="p">[</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">]</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;precipTotal&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;epoch&quot;</span><span class="p">)</span>
+        <span class="n">ob</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;tz&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">ob</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ob</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;duplicate day post&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 class="doc doc-heading" id="wunderground.wunderground.Wunderground.run">
+<code class="highlight language-python"><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Main method to run</p>
+
+        <details class="quote">
+          <summary>Source code in <code>wunderground/wunderground.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main method to run</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dbc</span><span class="p">)</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">wx</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">raw</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">raw</span>
+
+    <span class="n">last_hour</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">hour</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">last_minute</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">minute</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">minute</span> <span class="o">!=</span> <span class="n">last_minute</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_current</span><span class="p">()</span>
+                <span class="n">last_minute</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">minute</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;got current &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;failed current &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                <span class="p">)</span>
+                <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;skipping current &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">hour</span> <span class="o">!=</span> <span class="n">last_hour</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_day</span><span class="p">()</span>
+                <span class="n">last_hour</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span><span class="o">.</span><span class="n">hour</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;got day &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;failed day &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s2">&quot;skipping day &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">))</span>
+            <span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.748e2769.min.js"></script>
+      
+    
+  </body>
+</html>
